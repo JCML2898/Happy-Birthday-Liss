@@ -16,12 +16,6 @@ const video = document.getElementById("birthdayVideo");
 /* ACTIVAR MUSICA AL PRIMER TOQUE */
 /* ========================= */
 
-document.addEventListener("pointerdown", startMusic, { once: true });
-
-/* ========================= */
-/* ACTIVAR MUSICA AL PRIMER TOQUE */
-/* ========================= */
-
 function startMusic(){
 
     if(music && music.paused){
