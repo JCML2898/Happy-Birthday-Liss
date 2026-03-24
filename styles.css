@@ -1,517 +1,611 @@
-/* reset básico */
+/* RESET */
 
-*{
-box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
 
-html,body{
-margin:0;
-padding:0;
-overflow-x:hidden;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-img,iframe{
-max-width:100%;
-height:auto;
+img,
+iframe {
+  max-width: 100%;
+  height: auto;
 }
 
-/* body */
+/* BODY */
 
-body{
+body {
+  font-family: "Poppins", sans-serif;
+  background: #d7b4c6;
 
-font-family:'Poppins', sans-serif;
-background:#d7b4c6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-display:flex;
-justify-content:center;
-align-items:center;
+  min-height: 100vh;
 
-min-height:100vh;
-
-padding:20px;
-
+  padding: 20px;
 }
 
-/* tarjeta */
+/* TARJETA */
 
-.card{
+.card {
+  width: 1080px;
+  max-width: 100%;
 
-width:900px;
-max-width:100%;
+  background: #e9dde6;
 
-background:#e9dde6;
+  border-radius: 12px;
 
-border-radius:12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 
-box-shadow:0 15px 40px rgba(0,0,0,0.2);
+  position: relative;
 
-position:relative;
+  padding: 30px;
 
-padding:30px;
-
-overflow:hidden;
-
+  overflow: hidden;
 }
 
-/* header */
+/* HEADER */
 
-header{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-nav a{
-
-margin:0 20px;
-
-text-decoration:none;
-
-color:#6f5c75;
-
-font-weight:500;
-
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #6f5c75;
+  font-weight: 500;
 }
 
-.logo{
-font-size:35px;
+.logo {
+  font-size: 35px;
 }
 
-/* texto */
+/* TEXTO */
 
-.hero{
-
-text-align:center;
-margin-top:40px;
-
+.hero {
+  text-align: center;
+  margin-top: 40px;
 }
 
-.hero h1{
+.hero h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 60px;
+  color: #7c4f83;
 
-font-family:'Pacifico', cursive;
-
-font-size:60px;
-
-color:#7c4f83;
-
-margin:10px 0;
-
+  margin: 10px 0;
 }
 
-.hero p{
-
-color:#777;
-
-max-width:420px;
-
-margin:auto;
-
+.hero p {
+  color: #777;
+  font-size: 18px;
+  max-width: 650px;
+  margin: auto;
 }
 
-/* puntos */
+/* PUNTOS */
 
-.social{
-
-margin-top:20px;
-
+.social {
+  margin-top: 20px;
 }
 
-.social span{
-
-margin:0 10px;
-
-font-size:18px;
-
-color:#7c4f83;
-
+.social span {
+  margin: 0 10px;
+  font-size: 18px;
+  color: #7c4f83;
 }
 
-/* botón */
+/* ================= */
+/* BOTON */
+/* ================= */
 
-.memory-button{
+.memory-button {
+  margin-top: 25px;
 
-margin-top:25px;
+  padding: 14px 28px;
 
-padding:14px 28px;
+  background: #7c4f83;
+  color: white;
 
-background:#7c4f83;
+  font-size: 18px;
 
-color:white;
+  border: none;
+  border-radius: 30px;
 
-font-size:18px;
+  cursor: pointer;
 
-border:none;
+  transition: 0.3s;
 
-border-radius:30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 
-cursor:pointer;
-
-transition:all .3s ease;
-
-box-shadow:0 6px 15px rgba(0,0,0,.2);
-
+  position: relative;
+  overflow: hidden;
 }
 
-.memory-button:hover{
-
-background:#6b3f71;
-
-transform:translateY(-2px);
-
+.memory-button:hover {
+  background: #6b3f71;
+  transform: translateY(-2px);
 }
 
-/* corona de estrellas */
+/* BRILLO BOTON */
 
-.star-arc{
+.memory-button::after {
+  content: "";
+  position: absolute;
 
-position:absolute;
+  top: 0;
+  left: -100%;
 
-top:10px;
+  width: 100%;
+  height: 100%;
 
-left:50%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
 
-transform:translateX(-50%);
-
-width:100%;
-
-max-width:600px;
-
+  transition: 0.6s;
 }
 
-.star-arc svg{
-
-width:100%;
-
+.memory-button:hover::after {
+  left: 100%;
 }
 
-/* globos */
+/* ================= */
+/* CORONA ESTRELLAS */
+/* ================= */
 
-.balloons{
+.star-arc {
+  position: absolute;
+  top: 10px;
+  left: 50%;
 
-position:absolute;
+  transform: translateX(-50%);
 
-right:0;
-
-top:0;
-
+  width: 100%;
+  max-width: 600px;
 }
 
-.balloon{
-
-position:absolute;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-animation:float 6s infinite ease-in-out;
-
+.star-arc svg {
+  width: 100%;
 }
 
-.balloon-shape{
+/* ESTRELLAS BRILLANDO */
 
-width:70px;
+.star-arc text {
+  fill: #ffd43b;
 
-height:90px;
-
-background:radial-gradient(circle at 30% 30%, #ff6b81,#e84160);
-
-border-radius:50% 50% 45% 45%;
-
+  animation: starGlow 2s infinite alternate;
 }
 
-.string{
+@keyframes starGlow {
+  0% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 2px #fff);
+  }
 
-width:2px;
-
-height:40px;
-
-background:#444;
-
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #ffd43b);
+  }
 }
 
-/* curva globos */
+/* ================= */
+/* GLOBOS */
+/* ================= */
 
-.balloon1{
-right:160px;
-top:220px;
+.balloons {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
-.balloon2{
-right:90px;
-top:180px;
+.balloon {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  animation:
+    float 6s infinite ease-in-out,
+    balloonEntrance 1.5s ease-out;
 }
 
-.balloon3{
-right:20px;
-top:220px;
+/* COLORES */
+
+.balloon1 .balloon-shape {
+  background: radial-gradient(circle at 30% 30%, #ff6b81, #e84160);
 }
 
-@keyframes float{
-
-0%{transform:translateY(0)}
-
-50%{transform:translateY(-25px)}
-
-100%{transform:translateY(0)}
-
+.balloon2 .balloon-shape {
+  background: radial-gradient(circle at 30% 30%, #6bc5ff, #3498db);
 }
 
-/* osito */
-
-.bear{
-
-position:absolute;
-
-left:40px;
-
-bottom:20px;
-
+.balloon3 .balloon-shape {
+  background: radial-gradient(circle at 30% 30%, #ffd93b, #f1c40f);
 }
 
-.bear img{
+.balloon-shape {
+  width: 70px;
+  height: 90px;
 
-width:200px;
-
+  border-radius: 50% 50% 45% 45%;
 }
 
-/* cupcake */
-
-.cake{
-
-position:absolute;
-
-right:40px;
-
-bottom:40px;
-
-font-size:100px;
-
+.string {
+  width: 2px;
+  height: 40px;
+  background: #444;
 }
 
-/* confetti */
+/* POSICIONES */
 
-.confetti{
-
-position:absolute;
-
-width:8px;
-height:8px;
-
-background:#ffcc00;
-
-animation:fall 5s linear infinite;
-
+.balloon1 {
+  right: 160px;
+  top: 220px;
 }
 
-@keyframes fall{
-
-0%{transform:translateY(-100px)}
-
-100%{transform:translateY(500px)}
-
+.balloon2 {
+  right: 90px;
+  top: 180px;
 }
 
-/* modal video */
-
-.video-modal{
-
-display:none;
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,.7);
-
-justify-content:center;
-align-items:center;
-
-z-index:999;
-
+.balloon3 {
+  right: 20px;
+  top: 220px;
 }
 
-.video-box{
+/* MOVIMIENTO */
 
-position:relative;
-
-width:90%;
-max-width:700px;
-
-background:white;
-
-border-radius:10px;
-
-padding:10px;
-
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
 }
 
-.video-box iframe{
+/* APARECEN DESDE ABAJO */
 
-width:100%;
-height:400px;
+@keyframes balloonEntrance {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
 
-border:none;
-
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.close-video{
+/* ================= */
+/* OSITO */
+/* ================= */
 
-position:absolute;
-
-top:-10px;
-right:-10px;
-
-background:#7c4f83;
-
-color:white;
-
-border-radius:50%;
-
-padding:5px 10px;
-
-cursor:pointer;
-
+.bear {
+  position: absolute;
+  left: 40px;
+  bottom: 20px;
 }
 
-/* responsive */
-
-@media (max-width:768px){
-
-body{
-padding:10px;
+.bear img {
+  width: 200px;
 }
 
-.card{
+/* ================= */
+/* CUPCAKE */
+/* ================= */
 
-width:100%;
-max-width:100%;
+.cake {
+  position: absolute;
 
-margin:0;
+  right: 40px;
+  bottom: 40px;
 
-border-radius:15px;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-text-align:center;
-
+  font-size: 100px;
 }
 
-.hero h1{
-font-size:36px;
+/* VELA */
+
+.candle {
+  position: absolute;
+
+  bottom: 115px;
+  right: 65px;
+
+  width: 6px;
+  height: 22px;
+
+  background: white;
+
+  border-radius: 3px;
 }
 
-.hero p{
-font-size:14px;
-padding:0 10px;
+/* LLAMA */
+
+.flame {
+  position: absolute;
+
+  top: -12px;
+  left: -4px;
+
+  width: 14px;
+  height: 14px;
+
+  background: radial-gradient(circle, #fff 20%, #ffcc00 60%, #ff6600);
+
+  border-radius: 50%;
+
+  animation: flicker 0.15s infinite alternate;
 }
 
-/* corona */
+@keyframes flicker {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
 
-.star-arc{
-
-position:relative;
-
-margin-bottom:20px;
-
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
 }
 
-/* globos */
+/* CONFETTI COLORES */
 
-.balloons{
+body::before {
+  content: "";
 
-position:relative;
+  position: fixed;
 
-display:flex;
+  top: -200px;
+  left: 0;
 
-justify-content:center;
+  width: 100%;
+  height: 100%;
 
-align-items:flex-end;
+  pointer-events: none;
 
-gap:15px;
+  background-image:
+    radial-gradient(circle, #ffcc00 4px, transparent 4px),
+    radial-gradient(circle, #ff6b81 4px, transparent 4px),
+    radial-gradient(circle, #6bc5ff 4px, transparent 4px),
+    radial-gradient(circle, #7bed9f 4px, transparent 4px),
+    radial-gradient(circle, #ffa502 4px, transparent 4px),
+    radial-gradient(circle, #e056fd 4px, transparent 4px);
 
-margin:20px 0;
+  background-size:
+    120px 120px,
+    140px 140px,
+    160px 160px,
+    180px 180px,
+    200px 200px,
+    220px 220px;
 
-width:100%;
+  animation: confettiFall 8s linear infinite;
 
+  opacity: 0.7;
 }
 
-.balloon{
+@keyframes confettiFall {
+  0% {
+    background-position:
+      0 -200px,
+      50px -300px,
+      100px -400px,
+      150px -500px,
+      200px -600px,
+      250px -700px;
+  }
 
-position:relative;
-
-top:0 !important;
-right:0 !important;
-left:0 !important;
-
-margin:0 5px;
-
+  100% {
+    background-position:
+      0 800px,
+      50px 700px,
+      100px 600px,
+      150px 500px,
+      200px 400px,
+      250px 300px;
+  }
 }
 
-.balloon-shape{
+/* ================= */
+/* MODAL VIDEO */
+/* ================= */
 
-width:40px;
-height:55px;
+.video-modal {
+  display: none;
 
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
 }
 
-.string{
+.video-box {
+  position: relative;
 
-height:25px;
+  width: 90%;
+  max-width: 650px;
 
+  background: white;
+
+  border-radius: 10px;
+
+  padding: 10px;
 }
 
-/* osito */
+.video-box video {
+  width: 100%;
+  max-width: 600px;
 
-.bear{
+  height: auto;
 
-position:relative;
+  display: block;
 
-left:auto;
-bottom:auto;
+  margin: auto;
 
-margin-top:20px;
-
+  border-radius: 8px;
 }
 
-.bear img{
+.close-video {
+  position: absolute;
 
-width:140px;
+  top: -10px;
+  right: -10px;
 
+  background: #7c4f83;
+  color: white;
+
+  border-radius: 50%;
+
+  padding: 5px 10px;
+
+  cursor: pointer;
 }
 
-/* cupcake */
+/* ================= */
+/* RESPONSIVE */
+/* ================= */
 
-.cake{
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
 
-position:relative;
+  .card {
+    width: 100%;
+    max-width: 85%;
 
-right:auto;
-bottom:auto;
+    margin: 0;
 
-font-size:60px;
+    border-radius: 15px;
 
-margin-top:10px;
+    display: flex;
+    flex-direction: column;
 
-}
+    align-items: center;
+    text-align: center;
+  }
 
-.video-box iframe{
+  .hero h1 {
+    font-size: 30px;
+  }
 
-height:220px;
+  .hero p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
 
-}
+  /* corona */
 
+  .star-arc {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  /* globos */
+
+  .balloons {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    gap: 15px;
+
+    margin: 20px 0;
+
+    width: 100%;
+  }
+
+  .balloon {
+    position: relative;
+
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+
+    margin: 0 5px;
+  }
+
+  .balloon-shape {
+    width: 40px;
+    height: 55px;
+  }
+
+  .string {
+    height: 25px;
+  }
+
+  /* osito */
+
+  .bear {
+    position: relative;
+
+    left: auto;
+    bottom: auto;
+
+    margin-top: 20px;
+  }
+
+  .bear img {
+    width: 140px;
+  }
+
+  /* cupcake */
+
+  .cake {
+    position: relative;
+
+    right: auto;
+    bottom: auto;
+
+    font-size: 70px;
+
+    margin-top: 20px;
+  }
+
+  /* vela responsive */
+
+  .candle {
+    bottom: 80px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  /* modal */
+
+  .video-box iframe {
+    height: 220px;
+  }
 }
