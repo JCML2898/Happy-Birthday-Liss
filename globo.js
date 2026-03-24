@@ -16,11 +16,15 @@ const video = document.getElementById("birthdayVideo");
 /* ACTIVAR MUSICA AL PRIMER TOQUE */
 /* ========================= */
 
-/*document.addEventListener("pointerdown", startMusic, { once: true });
+document.addEventListener("pointerdown", startMusic, { once: true });
+
+/* ========================= */
+/* ACTIVAR MUSICA AL PRIMER TOQUE */
+/* ========================= */
 
 function startMusic(){
 
-    if(music){
+    if(music && music.paused){
 
         music.volume = 0.35;
 
@@ -28,14 +32,20 @@ function startMusic(){
 
     }
 
-}*/
+}
 
-window.addEventListener("load", () => {
+/* detectar cualquier interacción válida */
+
+document.addEventListener("touchstart", startMusic, { once:true });
+document.addEventListener("click", startMusic, { once:true });
+document.addEventListener("keydown", startMusic, { once:true });
+
+/*window.addEventListener("load", () => {
   if (music) {
     music.volume = 0.35;
     music.play().catch(() => {});
   }
-});
+});*/
 
 /* ========================= */
 /* ABRIR VIDEO */
