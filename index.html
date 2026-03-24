@@ -1,165 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
+    <title>Felicidades Liss</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="h2.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<link rel="shortcut icon" href="h2.png" type="image/x-icon">
-  
-<title>Felicidades Liss</title>
+  <body>
+    <div class="card">
+      <header>
+        <div class="logo">🎈</div>
+      </header>
 
-<link rel="stylesheet" href="styles.css">
+      <!-- CORONA ESTRELLAS -->
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+      <div class="star-arc">
+        <svg viewBox="0 0 600 120">
+          <path id="arc" d="M50,100 Q300,0 550,100" fill="transparent"></path>
 
-</head>
+          <text font-size="28">
+            <textPath href="#arc" startOffset="50%" text-anchor="middle">
+              ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐
+            </textPath>
+          </text>
+        </svg>
+      </div>
 
-<body>
+      <!-- GLOBOS -->
 
-<div class="card">
+      <div class="balloons">
+        <div class="balloon balloon1">
+          <div class="balloon-shape"></div>
+          <div class="string"></div>
+        </div>
 
-<header>
+        <div class="balloon balloon2">
+          <div class="balloon-shape"></div>
+          <div class="string"></div>
+        </div>
 
-<div class="logo">🎈</div>
-<!--
-<nav>
-<a href="#">Home</a>
-<a href="#">Menu</a>
-<a href="#">Album</a>
-<a href="#">Contact</a>
-</nav>-->
+        <div class="balloon balloon3">
+          <div class="balloon-shape"></div>
+          <div class="string"></div>
+        </div>
+      </div>
 
-</header>
+      <div class="hero">
+        <h1>Happy Birthday</h1>
+        <h1>Liss</h1>
 
+        <p>
+          Liss, hoy te celebro a ti y a esa fuerza que tienes para volver a
+          brillar. Desde que nos conocimos en la escuela supe que eras alguien
+          rara y especial. Gracias por dejarme seguir siendo parte de tu vida,
+          incluso ahora que ambos andamos medio achacosos.
+        </p>
+        <br />
+        <p>
+          También quiero agradecerte algo más: por no dejarme caer y por estar
+          ahí, sobre todo cuando salí de la cirugía. No sabes cuánto significa
+          para mí que hayas estado tan presente. Me alegra mucho verte bien,
+          feliz y volviendo a brillar. Nunca olvides lo increíble que eres.
+        </p>
+        <p>
+          <br />
+          <b style="font-size: 20px; color: #7c4f83">¡Feliz cumpleaños!</b
+          ><br />
+          (P.D. Pica el botón de abajo, te prometo que vale la pena).<br />
+          <span style="color: #7c4f83; font-weight: 500">
+            Un pequeño recuerdo para ti
+          </span>
+        </p>
 
-<!-- CORONA DE ESTRELLAS -->
+        <button class="memory-button" id="openVideo">
+          Presiona aquí, sonríe
+        </button>
 
-<div class="star-arc">
+        <div class="social">
+          <span>●</span>
+          <span>●</span>
+          <span>●</span>
+          <span>●</span>
+        </div>
+      </div>
 
-<svg viewBox="0 0 600 120">
+      <!-- OSITO -->
 
-<path id="arc"
-d="M50,100 Q300,0 550,100"
-fill="transparent"/>
+      <div class="bear">
+        <img src="bear.png" alt="Osito con pastel" />
+      </div>
 
-<text font-size="28">
+      <!-- CUPCAKE -->
 
-<textPath href="#arc" startOffset="50%" text-anchor="middle">
-⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐
-</textPath>
+      <div class="cake">
+        🧁
+        <div class="candle">
+          <div class="flame"></div>
+        </div>
+      </div>
+    </div>
 
-</text>
+    <!-- MODAL VIDEO -->
 
-</svg>
+    <div id="videoModal" class="video-modal">
+      <div class="video-box">
+        <span class="close-video" id="closeVideo">✖</span>
 
-</div>
+        <video id="birthdayVideo" controls>
+          <source src="2023.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
 
+    <!-- MUSICA -->
 
-<!-- GLOBOS -->
+    <audio id="bgmusic" loop>
+      <source src="musica.mp3" type="audio/mpeg" />
+    </audio>
 
-<div class="balloons">
-
-<div class="balloon balloon1">
-<div class="balloon-shape"></div>
-<div class="string"></div>
-</div>
-
-<div class="balloon balloon2">
-<div class="balloon-shape"></div>
-<div class="string"></div>
-</div>
-
-<div class="balloon balloon3">
-<div class="balloon-shape"></div>
-<div class="string"></div>
-</div>
-
-</div>
-
-
-<!-- CONTENIDO PRINCIPAL -->
-
-<div class="hero">
-
-<h1>Happy Birthday</h1>
-<h1>Liss</h1>
-
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nunc eleifend lectus eget aliquam luctus.
-</p>
-
-
-<!-- BOTON VIDEO -->
-
-<button class="memory-button"
-onclick="document.getElementById('videoModal').style.display='flex'">
-
-Presiona aquí, sonríe
-
-</button>
-
-
-<div class="social">
-<span>●</span>
-<span>●</span>
-<span>●</span>
-<span>●</span>
-</div>
-
-</div>
-
-
-<!-- OSITO -->
-
-<div class="bear">
-<img src="bear.png" alt="Osito con pastel">
-</div>
-
-
-<!-- CUPCAKE -->
-
-<div class="cake">🧁</div>
-
-
-<!-- CONFETTI -->
-
-<div class="confetti" style="left:10%"></div>
-<div class="confetti" style="left:20%"></div>
-<div class="confetti" style="left:30%"></div>
-<div class="confetti" style="left:40%"></div>
-<div class="confetti" style="left:50%"></div>
-<div class="confetti" style="left:60%"></div>
-<div class="confetti" style="left:70%"></div>
-<div class="confetti" style="left:80%"></div>
-
-</div>
-
-
-<!-- MODAL VIDEO -->
-
-<div id="videoModal" class="video-modal">
-
-<div class="video-box">
-
-<span class="close-video"
-onclick="document.getElementById('videoModal').style.display='none'">
-
-✖
-
-</span>
-
-<iframe
-src="2023.mp4"
-allowfullscreen>
-</iframe>
-
-</div>
-
-</div>
-
-
-</body>
+    <script src="globo.js"></script>
+  </body>
 </html>
