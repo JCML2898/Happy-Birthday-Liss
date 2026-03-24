@@ -12,12 +12,30 @@ const video = document.getElementById("birthdayVideo");
 /* MUSICA */
 /* ========================= */
 
+/* ========================= */
+/* ACTIVAR MUSICA AL PRIMER TOQUE */
+/* ========================= */
+
+document.addEventListener("pointerdown", startMusic, { once: true });
+
+function startMusic(){
+
+    if(music){
+
+        music.volume = 0.35;
+
+        music.play().catch(()=>{});
+
+    }
+
+}
+/*
 window.addEventListener("load", () => {
   if (music) {
     music.volume = 0.35;
     music.play().catch(() => {});
   }
-});
+});*/
 
 /* ========================= */
 /* ABRIR VIDEO */
