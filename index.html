@@ -1,28 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prueba GitHub Pages</title>
 
-<style>
-body{
-    background: gray;
-    color: red;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 100px;
-}
-</style>
+<title>Felicidades Liss</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<h1>Hello World!!</h1>
-<p>Mi página de prueba en GitHub Pages funciona 🎉</p>
+<div class="card">
+
+<header>
+
+<div class="logo">🎈</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Menu</a>
+<a href="#">Album</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+
+<!-- CORONA DE ESTRELLAS -->
+
+<div class="star-arc">
+
+<svg viewBox="0 0 600 120">
+
+<path id="arc"
+d="M50,100 Q300,0 550,100"
+fill="transparent"/>
+
+<text font-size="28">
+
+<textPath href="#arc" startOffset="50%" text-anchor="middle">
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐
+</textPath>
+
+</text>
+
+</svg>
+
+</div>
+
+
+<!-- GLOBOS -->
+
+<div class="balloons">
+
+<div class="balloon balloon1">
+<div class="balloon-shape"></div>
+<div class="string"></div>
+</div>
+
+<div class="balloon balloon2">
+<div class="balloon-shape"></div>
+<div class="string"></div>
+</div>
+
+<div class="balloon balloon3">
+<div class="balloon-shape"></div>
+<div class="string"></div>
+</div>
+
+</div>
+
+
+<!-- CONTENIDO PRINCIPAL -->
+
+<div class="hero">
+
+<h1>Happy Birthday</h1>
+<h1>Liss</h1>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nunc eleifend lectus eget aliquam luctus.
+</p>
+
+
+<!-- BOTON VIDEO -->
+
+<button class="memory-button"
+onclick="document.getElementById('videoModal').style.display='flex'">
+
+Presiona aquí, sonríe
+
+</button>
+
+
+<div class="social">
+<span>●</span>
+<span>●</span>
+<span>●</span>
+<span>●</span>
+</div>
+
+</div>
+
+
+<!-- OSITO -->
+
+<div class="bear">
+<img src="bear.png" alt="Osito con pastel">
+</div>
+
+
+<!-- CUPCAKE -->
+
+<div class="cake">🧁</div>
+
+
+<!-- CONFETTI -->
+
+<div class="confetti" style="left:10%"></div>
+<div class="confetti" style="left:20%"></div>
+<div class="confetti" style="left:30%"></div>
+<div class="confetti" style="left:40%"></div>
+<div class="confetti" style="left:50%"></div>
+<div class="confetti" style="left:60%"></div>
+<div class="confetti" style="left:70%"></div>
+<div class="confetti" style="left:80%"></div>
+
+</div>
+
+
+<!-- MODAL VIDEO -->
+
+<div id="videoModal" class="video-modal">
+
+<div class="video-box">
+
+<span class="close-video"
+onclick="document.getElementById('videoModal').style.display='none'">
+
+✖
+
+</span>
+
+<iframe
+src="https://www.youtube.com/embed/VIDEO_ID"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
 
 </body>
-
 </html>
