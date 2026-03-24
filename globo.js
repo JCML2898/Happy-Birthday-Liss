@@ -7,7 +7,7 @@ const modal = document.getElementById("videoModal");
 const openBtn = document.getElementById("openVideo");
 const closeBtn = document.getElementById("closeVideo");
 const video = document.getElementById("birthdayVideo");
-
+const flame = document.querySelector(".flame");
 /* ========================= */
 /* MUSICA */
 /* ========================= */
@@ -140,4 +140,19 @@ function explodeConfetti(element) {
 
     setTimeout(() => conf.remove(), 1200);
   }
+
+    /* ========================= */
+/* APAGAR VELA */
+/* ========================= */
+
+if(flame){
+
+  flame.addEventListener("click", function(){
+
+    flame.style.animation = "none";
+    flame.style.opacity = "0";
+
+  });
+
+}
 }
