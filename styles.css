@@ -647,3 +647,56 @@ opacity:0;
 .flame{
 cursor:pointer;
 }
+
+
+/* ================= */
+/* TEXTO DESEO */
+/* ================= */
+
+.wish-text{
+
+position:fixed;
+
+font-family:'Pacifico', cursive;
+
+font-size:28px;
+
+color:#7c4f83;
+
+left:50%;
+top:40%;
+
+transform:translate(-50%, -50%);
+
+opacity:0;
+
+animation:wishAppear 2.5s ease-out forwards;
+
+pointer-events:none;
+
+z-index:50;
+
+}
+
+@keyframes wishAppear{
+
+0%{
+opacity:0;
+transform:translate(-50%, -20%) scale(0.8);
+}
+
+20%{
+opacity:1;
+transform:translate(-50%, -50%) scale(1);
+}
+
+80%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+transform:translate(-50%, -80%) scale(1.1);
+}
+
+}
