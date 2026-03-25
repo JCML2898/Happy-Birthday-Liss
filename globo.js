@@ -25,7 +25,7 @@ function startMusic(){
 
 }
 
-/* detectar cualquier interacción válida */
+/* detectar interacción */
 
 document.addEventListener("touchstart", startMusic, { once:true });
 document.addEventListener("click", startMusic, { once:true });
@@ -151,6 +151,18 @@ if (flame) {
     flame.style.animation="none";
     flame.style.opacity="0";
 
+    /* bajar volumen música */
+
+    if(music){
+
+      music.volume = 0.1;
+
+      setTimeout(()=>{
+        music.volume = 0.35;
+      },2000);
+
+    }
+
     /* humo */
 
     const smoke=document.createElement("div");
@@ -166,9 +178,21 @@ if (flame) {
 
     setTimeout(()=>smoke.remove(),2000);
 
-    /* explosión de confeti */
+    /* confeti desde la vela */
 
     explodeConfetti(flame);
+
+    /* texto pedir deseo */
+
+    const wish=document.createElement("div");
+
+    wish.className="wish-text";
+
+    wish.textContent="Pide un deseo ✨";
+
+    document.body.appendChild(wish);
+
+    setTimeout(()=>wish.remove(),2500);
 
   }
 
