@@ -141,7 +141,7 @@ function explodeConfetti(element) {
     setTimeout(() => conf.remove(), 1200);
   }
 
-    /* ========================= */
+/* ========================= */
 /* APAGAR VELA */
 /* ========================= */
 
@@ -149,8 +149,25 @@ if(flame){
 
   flame.addEventListener("click", function(){
 
-    flame.style.animation = "none";
-    flame.style.opacity = "0";
+    /* apagar llama */
+
+    flame.style.animation="none";
+    flame.style.opacity="0";
+
+    /* crear humo */
+
+    const smoke=document.createElement("div");
+
+    smoke.className="smoke";
+
+    const rect=flame.getBoundingClientRect();
+
+    smoke.style.left=rect.left+"px";
+    smoke.style.top=rect.top+"px";
+
+    document.body.appendChild(smoke);
+
+    setTimeout(()=>smoke.remove(),2000);
 
   });
 
