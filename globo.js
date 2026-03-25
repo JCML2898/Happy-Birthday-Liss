@@ -145,31 +145,37 @@ function explodeConfetti(element) {
 /* APAGAR VELA */
 /* ========================= */
 
-if(flame){
+if (flame) {
 
-  flame.addEventListener("click", function(){
+  function apagarVela() {
 
     /* apagar llama */
 
-    flame.style.animation="none";
-    flame.style.opacity="0";
+    flame.style.animation = "none";
+    flame.style.opacity = "0";
 
     /* crear humo */
 
-    const smoke=document.createElement("div");
+    const smoke = document.createElement("div");
 
-    smoke.className="smoke";
+    smoke.className = "smoke";
 
-    const rect=flame.getBoundingClientRect();
+    const rect = flame.getBoundingClientRect();
 
-    smoke.style.left=rect.left+"px";
-    smoke.style.top=rect.top+"px";
+    smoke.style.left = rect.left + "px";
+    smoke.style.top = rect.top + "px";
 
     document.body.appendChild(smoke);
 
-    setTimeout(()=>smoke.remove(),2000);
+    setTimeout(() => smoke.remove(), 2000);
 
-  });
+  }
+
+  /* PC */
+  flame.addEventListener("click", apagarVela);
+
+  /* CELULAR */
+  flame.addEventListener("touchstart", apagarVela);
 
 }
 }
